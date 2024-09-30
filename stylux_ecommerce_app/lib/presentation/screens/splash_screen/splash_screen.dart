@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:stylux_ecommerce_app/presentation/screens/login_screen/login_screen.dart';
+import 'package:stylux_ecommerce_app/presentation/screens/option_screen/option_screen.dart';
 import 'package:stylux_ecommerce_app/presentation/theme/color_scheme.dart';
 
 class SplashScreen extends StatefulWidget {
@@ -17,11 +17,11 @@ class _SplashScreenState extends State<SplashScreen>
   @override
   void initState() {
     controller =
-        AnimationController(vsync: this, duration: const Duration(seconds: 7));
+        AnimationController(vsync: this, duration: const Duration(seconds: 2));
     animation = CurvedAnimation(parent: controller, curve: Curves.easeInCirc);
     controller.forward().then((value) {
       Navigator.of(context).push(MaterialPageRoute(
-        builder: (context) => const LoginScreen(),
+        builder: (context) => const OptionScreen(),
       ));
     });
     super.initState();
@@ -36,10 +36,10 @@ class _SplashScreenState extends State<SplashScreen>
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: AppColors.primary,
+      backgroundColor: AppColors.black,
       body: Center(
         child: FadeTransition(
-            opacity: animation, child: Image.asset("assets/images/Stylux.png")),
+            opacity: animation, child: Image.asset("assets/images/1.png")),
       ),
     );
   }
