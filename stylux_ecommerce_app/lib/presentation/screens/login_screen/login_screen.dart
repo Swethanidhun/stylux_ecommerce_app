@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:stylux_ecommerce_app/presentation/theme/color_scheme.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});
@@ -10,6 +11,8 @@ class LoginScreen extends StatefulWidget {
 class _LoginScreenState extends State<LoginScreen> {
   @override
   Widget build(BuildContext context) {
-    return const Scaffold();
+    return Scaffold(
+     
+    );
   }
 }
