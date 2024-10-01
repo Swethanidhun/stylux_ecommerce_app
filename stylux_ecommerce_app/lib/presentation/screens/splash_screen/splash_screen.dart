@@ -20,9 +20,11 @@ class _SplashScreenState extends State<SplashScreen>
         AnimationController(vsync: this, duration: const Duration(seconds: 2));
     animation = CurvedAnimation(parent: controller, curve: Curves.easeInCirc);
     controller.forward().then((value) {
-      Navigator.of(context).push(MaterialPageRoute(
-        builder: (context) => const OptionScreen(),
-      ));
+      Future.delayed(const Duration(seconds: 2)).then((_) {
+        Navigator.of(context).push(MaterialPageRoute(
+          builder: (context) => const OptionScreen(),
+        ));
+      });
     });
     super.initState();
   }
